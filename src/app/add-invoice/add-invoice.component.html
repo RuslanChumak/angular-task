@@ -1,0 +1,8 @@
+<h3>Add Invoice</h3>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Invoice name</mat-label>
+      <input matInput placeholder="Name...." name='invoice' [(ngModel)]="invoice">
+    </mat-form-field>
+</form>
+<button (click)="add()" mat-flat-button color="accent">Add</button>

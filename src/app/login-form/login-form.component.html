@@ -1,0 +1,13 @@
+<h3>Login Form</h3>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="example@mail.com" name='email' [(ngModel)] = "email" value="user@mail.ru"/>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Password</mat-label>
+      <input type='password' matInput placeholder="Password...." name='password' [(ngModel)] = "password" value="password"/>
+    </mat-form-field>
+  </form>
+  <button (click) = "login()" mat-flat-button color="primary">Sign in</button>

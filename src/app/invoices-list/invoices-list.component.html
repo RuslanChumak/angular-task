@@ -1,0 +1,17 @@
+<app-add-invoice (addInvoice) = "addInvoice($event)"></app-add-invoice>
+<h3>Invoices List</h3>
+<app-invoice-search (Search) = 'search($event)'></app-invoice-search>
+<mat-list role="list" class="invoices">
+    <mat-list-item role="listitem" *ngFor="let item of filteredInvoices; let i = index">
+        {{item}}
+        <div>
+            <button mat-mini-fab color="accent" (click)='addInvoice(item)' aria-label="Copy">
+                <mat-icon>note</mat-icon>
+            </button>
+            <button mat-mini-fab color="warn" (click)='delete(i)' aria-label="Delete">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+        
+    </mat-list-item>
+</mat-list>
